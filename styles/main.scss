@@ -1,0 +1,37 @@
+$primary-color: #c2e1f1;
+$secondary-color: #4266f5;
+
+
+html{
+    background-color: #c2e1f1;
+    height: 100%;
+}
+
+.display-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-text{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.button{
+    @extend .display-center;
+    padding: 10px;
+    color: white;
+    background-color: red;
+    width: fit-content;
+    border-radius: 5px;
+    margin-top: 5rem;
+    cursor: pointer;
+}
+
+.main-container{
+    display: flex;
+}
+
