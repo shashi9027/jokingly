@@ -1,10 +1,14 @@
 $primary-color: #c2e1f1;
 $secondary-color: #4266f5;
-
+$text-color: #ebab34;
 
 html{
     background-color: #c2e1f1;
     height: 100%;
+}
+
+body{
+    margin: 0px
 }
 
 .display-center{
@@ -20,6 +24,12 @@ html{
     padding-top: 100px;
 }
 
+.main-heading{
+    font-size: 24px;
+    font-weight: 600;
+    color: $text-color
+}
+
 .button{
     @extend .display-center;
     padding: 10px;
@@ -31,7 +41,52 @@ html{
     cursor: pointer;
 }
 
+.header{
+    @extend .display-center;
+    height: 50px;
+    background: linear-gradient(to bottom, #3498db, #9b59b6);
+    color: white
+}
+
 .main-container{
     display: flex;
+    .left-list{
+        max-height: calc(100vh - 50px);
+        overflow-y: auto;
+       .item{
+          @extend .display-center;
+          min-width: 200px;
+          min-height: 40px;
+          color: white;
+          font-weight: 600;
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+          background-color: #c2e1f1;
+          cursor: pointer
+       }
+    }
+    .right-box{
+       flex: 1;
+       overflow-y: auto;
+       max-height: calc(100vh - 50px);
+    }
 }
+
+
+.jokes-card{
+    border: 2px solid #acb1b4;
+    border-radius: 5px;
+    width: 400px;
+    color: rgb(221, 79, 13);
+    padding: 10px;
+    min-height: 200px;
+    background-color: white;
+
+}
+
+.active{
+  border-width: 10px; /* Border width */
+  border-style: solid; /* Border style */
+  border-color: linear-gradient(to right, red, blue);
+}
+
 
